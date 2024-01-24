@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "tvo-rmlib"
+version = "0.1.0"
+description = ""
+authors = ["Tien Vo <tien.a.vo@proton.me>"]
+license = "GPLv3"
+readme = "README.md"
+packages = [{ include = "rmlib", from = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+click = "^8.1.7"
+pymupdf = "^1.23.12"
+
+[tool.poetry.scripts]
+rmlib = "rmlib.cli.__main__:cli"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
