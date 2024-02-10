@@ -14,7 +14,7 @@ def compile_pdf():
         if not tex_file.match("*.tex"):
             continue
 
-        output = subprocess.run(["tectonic", tex_file])
+        output = subprocess.run(["tectonic", "-c", "minimal", tex_file])
         if output.returncode != 0:
             continue
 

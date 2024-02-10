@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "tvo-rmlib"
+name = "rmlib"
 version = "0.1.0"
 description = ""
 authors = ["Tien Vo <tien.a.vo@proton.me>"]
