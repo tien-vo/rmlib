@@ -2,7 +2,7 @@
 name = "rmlib"
 version = "0.1.0"
 description = ""
-authors = ["Tien Vo <tien.a.vo@proton.me>"]
+authors = ["Tien Vo <tvo.email@proton.me>"]
 license = "GPLv3"
 readme = "README.md"
 packages = [{ include = "rmlib", from = "src" }]
