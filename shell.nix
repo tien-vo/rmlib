@@ -4,6 +4,7 @@ let
   fhs = pkgs.buildFHSUserEnv({
     inherit name;
     targetPkgs = pkgs: [
+      pkgs.util-linux
       pkgs.micromamba
       pkgs.tectonic
     ];

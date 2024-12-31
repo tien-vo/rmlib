@@ -1,7 +1,9 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{worksheet}[2024/01/13 Handwriting Worksheet]
 
-\LoadClass[landscape,60pt,extrafontsizes]{memoir}
+\LoadClass[36pt,extrafontsizes]{memoir}
+
+\DoubleSpacing
 
 \RequirePackage[T1]{fontenc}
 \RequirePackage{calligra}
@@ -10,10 +12,8 @@
 \RequirePackage{lineno}
 \RequirePackage{tikz}
 
-\geometry{margin=1in, top=0.5in, bottom=0.5in}
+\geometry{margin=1in, top=0.0in, bottom=0.2in}
 \setlength\parindent{0pt}
-
-\DoubleSpacing
 
 \newcommand{\lowercaseheight}{0.65ex}
 \newcommand{\uppercaseheight}{2.2ex}
@@ -37,7 +37,7 @@
     }
     \renewcommand\linenumberfont{\normalfont\color{black}}
     \begin{linenumbers}
-        \color{black!25}
+    \color{black!25}
 }{
     \end{linenumbers}
 }

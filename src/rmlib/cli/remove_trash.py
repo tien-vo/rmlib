@@ -3,6 +3,7 @@ import os
 import re
 import shutil
 from os.path import basename, splitext
+from typing import Any, Sequence
 
 import click
 
@@ -11,20 +12,20 @@ from rmlib.io import SYNC_DIR
 
 def get_rm_trash_files() -> list[str]:
     file_list = []
-    for metadata_file in SYNC_DIR.iterdir():
+    for metadata_file in (SYNC_DIR / "xochitl").iterdir():
         if not metadata_file.match("*.metadata"):
             continue
 
         metadata = json.load(open(metadata_file))
-        if metadata["parent"] == "trash":
+        if metadata["parent"] in "trash":
             file_list.append(splitext(basename(metadata_file))[0])
 
     return file_list
 
 
-def get_linked_files(rm_file: str) -> list[str]:
+def get_linked_files(rm_file: str) -> Sequence[os.PathLike[Any]]:
     file_list = []
-    for file in SYNC_DIR.iterdir():
+    for file in (SYNC_DIR / "xochitl").iterdir():
         if not re.search(f"{rm_file}*", str(file)):
             continue
 
